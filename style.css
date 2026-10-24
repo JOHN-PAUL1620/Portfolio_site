@@ -60,3 +60,35 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 
 /* Keep project titles clear of the moving footage. */
 .poster{max-width:84%;padding:10px 12px 13px;background:rgba(245,244,239,.96);color:var(--ink);border:1px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+
+/* Mobile: keep the pace compact without changing the desktop composition. */
+@media(max-width:700px){
+  .navbar{height:66px}
+  .brand{font-size:19px}
+  .hero{min-height:0;padding:92px 6vw 26px;justify-content:flex-start}
+  .hero-center{margin:48px 0 42px;padding:0}
+  .hero h1{font-size:18vw;margin:18px 0 22px}
+  .intro{font-size:14px;line-height:1.55}
+  .round-btn{width:106px;height:106px;margin-top:26px}
+  .hero-bottom{font-size:8px}
+  .ticker-track{padding:9px 0}
+  .statement,.work,.about,.services,.contact{padding:64px 6vw}
+  .statement h2,.section-title h2,.about h2,.contact h2{font-size:clamp(44px,12.5vw,56px);margin:22px 0 26px}
+  .section-title{margin-bottom:36px}
+  .cards{gap:32px}
+  .card-big .visual{height:auto;aspect-ratio:16/9}
+  .visual.v2,.visual.v3{height:390px}
+  .poster{left:5%;bottom:6%;padding:7px 9px 9px;font-size:clamp(24px,8vw,34px);box-shadow:3px 3px 0 var(--ink)}
+  .caption{padding:12px 0}
+  .caption h3{font-size:16px}
+  .text-link{margin-top:42px}
+  .about-grid{gap:26px}
+  .process-strip{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;margin-top:52px;padding:4px 0}
+  .process-strip i{display:none}
+  .process-strip span{padding:12px 0;border-bottom:1px solid var(--line)}
+  .process-strip span:nth-of-type(n+3){border-bottom:0}
+  .service-row{padding:17px 0}
+  .service-row p{font-size:12px;line-height:1.45}
+  .links{margin-top:42px}
+  footer{padding:18px 6vw;gap:12px}
+}
