@@ -43,3 +43,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 /* Match the fourth video's tilt to the second video. */
 .v4 .autoplay-video{transform:rotate(5deg)}
 .v4:before{transform:rotate(5deg)}
+
+/* Fit the replacement third video in its native portrait orientation. */
+.v3 .autoplay-video{inset:4% auto auto 50%!important;width:clamp(180px,21vw,238px)!important;height:clamp(320px,37.333vw,423px)!important;aspect-ratio:9/16;transform:translateX(-50%) rotate(-5deg);object-fit:cover}
+.v3:before{width:clamp(180px,21vw,238px);height:clamp(320px,37.333vw,423px);left:50%;top:4%;transform:translateX(-50%) rotate(-5deg)}
+.card:hover .visual.v3:before{transform:translateX(-50%) rotate(0) scale(1.05)}
+.card:hover .visual.v3 .autoplay-video{transform:translateX(-50%) rotate(0) scale(1.05)}
+
+/* Arrange the landscape and portrait projects in balanced editorial rows. */
+@media(min-width:701px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:72px 28px;align-items:start}
+  .card:nth-child(even){margin-top:0}
+  .card.card-big{grid-column:1/-1}
+  .card.card-big .visual{height:auto;aspect-ratio:16/9}
+}
+
+/* Keep project titles clear of the moving footage. */
+.poster{max-width:84%;padding:10px 12px 13px;background:rgba(245,244,239,.96);color:var(--ink);border:1px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
